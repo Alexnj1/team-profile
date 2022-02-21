@@ -1,4 +1,3 @@
-const { jest } = require('@jest/globals')
 const Employee = require('../lib/Employee.js')
 
 test('does the employee class return the required info?', () => {
