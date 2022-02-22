@@ -1,8 +1,17 @@
-var fs = require("fs")
-var questions = require('../team-profile/src/questions')
+var fs = require("fs");
+var questions = require("../team-profile/src/questions");
 
-function app () {
-    return questions()
+questions();
+
+function app(data) {
+  fs.writeFile('../dist/index.html', data, (err) => {
+        if (err) throw err
+        else {
+            console.log('Your team and webpage has been built! See dist/index.html for the webpage')
+        }
+    })
 }
 
-app()
+module.exports = app 
+
+    

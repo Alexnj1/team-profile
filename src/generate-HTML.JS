@@ -1,4 +1,8 @@
-function generateHTML (manager, engineer, intern) {
+const genEngineer = require('./gen-engineer')
+const genIntern = require('../src/gen-intern')
+const genManager = require('../src/gen-manager')
+
+function generateHTML (data) {
     
     return  `
     <!DOCTYPE html>
@@ -16,12 +20,12 @@ function generateHTML (manager, engineer, intern) {
         </header>
 
         <main style="display: flex; justify-content: space-around; flex-wrap: wrap;">
-            ${manager}
-            ${engineer}
-            ${intern}
+            ${genManager(data)}
+            ${genEngineer(data)}
+            ${genIntern(data)}
         </main>
     </body>
     </html>`
 }
 
-module.exports = (generateHTML)
+module.exports = generateHTML
