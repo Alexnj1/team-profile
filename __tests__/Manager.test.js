@@ -3,7 +3,7 @@ const Employee = require("../lib/Employee.js");
 jest.mock("../lib/Employee.js");
 
 test("does manager return required info?", () => {
-  const manager = new Manager("2");
+  const manager = new Manager("alex", "1", "alex@gmail.com", "2");
 
   expect(manager.getName()).toEqual("alex");
   expect(manager.getId()).toEqual("1");
