@@ -1,8 +1,8 @@
 const Manager = require("../lib/Manager");
 
 function genManager(data) {
-    var manager = new Manager(data.Name, data.Id, data.email, data.office)
-    return `
+  var manager = new Manager(data.Name, data.Id, data.email, data.office);
+  return `
         <div class="card rounded-3 shadow text-white mt-5 mb-3 px-0" style="max-width: 18rem; box-shadow: 10px, 10px, blue;">
             <div class="card-header rounded-top bg-primary">
                 <h2>${manager.getName()}</h2>
@@ -21,7 +21,7 @@ function genManager(data) {
               </ul>
             </div>
         </div>
-    `
+    `;
 }
 
 module.exports = genManager;

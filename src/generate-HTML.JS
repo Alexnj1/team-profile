@@ -1,10 +1,9 @@
-const genEngineer = require('./gen-engineer')
-const genIntern = require('../src/gen-intern')
-const genManager = require('../src/gen-manager')
+const genEngineer = require("./gen-engineer");
+const genIntern = require("../src/gen-intern");
+const genManager = require("../src/gen-manager");
 
-function generateHTML (data) {
-    
-    return  `
+function generateHTML(data) {
+  return `
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -25,7 +24,7 @@ function generateHTML (data) {
             ${genIntern(data)}
         </main>
     </body>
-    </html>`
+    </html>`;
 }
 
-module.exports = generateHTML
+module.exports = generateHTML;

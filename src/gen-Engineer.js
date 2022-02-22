@@ -1,13 +1,18 @@
-const Engineer = require('../lib/Engineer')
+const Engineer = require("../lib/Engineer");
 
 function genEngineer(data) {
-    var e = []
-    if (!data.engineers) {
-        return ''
-    } else {
-        for (i=0; i<data.engineers.length; i++) {
-            var engineer = new Engineer(data.engineers[i].Name, data.engineers[i].Id, data.engineers[i].Email, data.engineers[i].Github)
-            e.push(`
+  var e = [];
+  if (!data.engineers) {
+    return "";
+  } else {
+    for (i = 0; i < data.engineers.length; i++) {
+      var engineer = new Engineer(
+        data.engineers[i].Name,
+        data.engineers[i].Id,
+        data.engineers[i].Email,
+        data.engineers[i].Github
+      );
+      e.push(`
             <div class="card rounded-3 shadow text-white mt-5 mb-3 px-0" style="max-width: 18rem; box-shadow: 10px, 10px, blue;">
                 <div class="card-header rounded-top bg-primary">
                     <h2>${engineer.getName()}</h2>
@@ -26,12 +31,10 @@ function genEngineer(data) {
                 </ul>
                 </div>
             </div>
-        `)    
-        }
-        return e.join('')
+        `);
     }
-
-
+    return e.join("");
+  }
 }
 
 module.exports = genEngineer;

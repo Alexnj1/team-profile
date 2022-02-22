@@ -1,13 +1,18 @@
-const Intern = require('../lib/Intern')
+const Intern = require("../lib/Intern");
 
 function genIntern(data) {
-    var int = []
-    if (!data.interns) {
-        return ''
-    } else {
-        for(i=0; i<data.interns.length; i++) {
-            var intern = new Intern(data.interns[i].Name, data.interns[i].Id, data.interns[i].Email, data.interns[i].School)
-            int.push (`
+  var int = [];
+  if (!data.interns) {
+    return "";
+  } else {
+    for (i = 0; i < data.interns.length; i++) {
+      var intern = new Intern(
+        data.interns[i].Name,
+        data.interns[i].Id,
+        data.interns[i].Email,
+        data.interns[i].School
+      );
+      int.push(`
             <div class="card rounded-3 shadow text-white mt-5 mb-3 px-0" style="max-width: 18rem; box-shadow: 10px, 10px, blue;">
                 <div class="card-header rounded-top bg-primary">
                     <h2>${intern.getName()}</h2>
@@ -27,11 +32,10 @@ function genIntern(data) {
                 </ul>
                 </div>
             </div>
-            `)  
-        }
-        return int.join('')
+            `);
     }
-    
+    return int.join("");
+  }
 }
 
 module.exports = genIntern;
