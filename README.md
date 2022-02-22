@@ -43,6 +43,10 @@
 
   ### Refer to the video below
   
+  ## Screenshot of rendered HTML
+  ### ![engineer](https://user-images.githubusercontent.com/93218601/155205627-f511a3d7-4135-459b-a5b4-6ecdb80ce9ee.png)
+
+  
   ## Questions
 
 
