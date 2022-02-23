@@ -61,5 +61,5 @@
   ## License
   
   
-  ### This project is licensed under the MIT open source license. Visit [Open Source Initiative](http://www.opensource.org/licenses/MIT) for the full license documentation.
+  ### This project is licensed under the MIT open source license. Visit [LICENSE](/LICENSE) for the full license documentation.
   
